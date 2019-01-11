@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">mylibrarytest</string>
+    <string name="title_activity_main__library">MainActivity_Library</string>
+</resources>

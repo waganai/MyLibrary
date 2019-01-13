@@ -2,9 +2,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 28
-
-
-
+    
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 28
@@ -22,6 +20,12 @@ android {
         }
     }
 
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
 }
 
 dependencies {
@@ -33,6 +37,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation(name: 'poss', ext: 'aar')
 }
 
 // 然后你可以拷贝下面这一大段 修改注释的地方
